@@ -19,7 +19,7 @@ export default function Footer() {
             {personalInfo.name}
           </p>
           <p className="text-xs text-neutral-500 font-light">
-            AI Video Producer & Creative Technologist
+            AI Video Producer / Video Creator
           </p>
         </div>
 

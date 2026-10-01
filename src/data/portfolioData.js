@@ -1,6 +1,6 @@
 /**
  * Portfolio Data Configuration
- * Lê Phong Vinh | AI Video Producer & Creative Technologist
+ * Lê Phong Vinh | AI Video Producer / Video Creator
  * 
  * You can easily bind this file to a Firebase Realtime Database listener in App.jsx
  * or within each individual component to fetch data dynamically.
@@ -8,8 +8,8 @@
 
 export const personalInfo = {
   name: "LÊ PHONG VINH",
-  title: "AI Video Producer",
-  subtitle: "Creative Technologist",
+  title: "AI Video Producer / Video Creator",
+  subtitle: "Video Creator",
   headline: "AI Content Producer. Xây dựng quy trình. Tối ưu chuyển đổi.",
   subHeadline: "Ứng dụng hệ sinh thái AI tạo sinh (Midjourney, Kling AI) và tư duy dữ liệu để sản xuất hàng loạt video Affiliate Performance.",
   heroVideoUrl: "/video/0603(1).mp4", // Cinematic 60fps AI video
