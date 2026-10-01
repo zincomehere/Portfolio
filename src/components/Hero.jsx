@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Play, ArrowRight, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export default function Hero() {
   const videoRef = useRef(null);
@@ -49,7 +50,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-neutral-950">
         {/* Placeholder image that shows before video loads, or as fallback */}
         <img
-          src={personalInfo.heroVideoPlaceholder}
+          src={getAssetUrl(personalInfo.heroVideoPlaceholder)}
           alt="Hero Background Fallback"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             videoLoaded ? 'opacity-10' : 'opacity-30'
@@ -70,7 +71,7 @@ export default function Hero() {
           autoPlay
           preload="auto"
         >
-          <source src={personalInfo.heroVideoUrl} type="video/mp4" />
+          <source src={getAssetUrl(personalInfo.heroVideoUrl)} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

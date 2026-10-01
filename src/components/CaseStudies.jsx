@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Play, Cpu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { caseStudies } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export default function CaseStudies() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -18,11 +19,6 @@ export default function CaseStudies() {
 
   const handleMouseLeave = (id) => {
     setHoveredCard(null);
-    const video = videoRefs.current[id];
-    if (video) {
-      video.pause();
-      video.currentTime = 0; // Reset to show the first frame of the video as placeholder
-    }
   };
 
   return (
@@ -51,6 +47,7 @@ export default function CaseStudies() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {caseStudies.map((project, index) => {
             const isHovered = hoveredCard === project.id;
+            const fullVideoUrl = getAssetUrl(project.videoUrl);
 
             return (
               <motion.div
@@ -67,16 +64,17 @@ export default function CaseStudies() {
                 {/* Visual Glow Border Effect */}
                 <div className="absolute -inset-px bg-gradient-to-r from-purple-500/0 to-cyan-500/0 group-hover:from-purple-500/15 group-hover:to-cyan-500/15 rounded-3xl transition-all duration-500 pointer-events-none z-20"></div>
 
-                {/* Video Component (Always visible, preloads metadata to show the first frame as background image) */}
+                {/* Video Component (Autoplays silently, showing dynamic motion in preview) */}
                 <div className="absolute inset-0 w-full h-full bg-neutral-900">
                   <video
                     ref={(el) => (videoRefs.current[project.id] = el)}
-                    src={project.videoUrl}
+                    src={`${fullVideoUrl}#t=0.001`}
                     className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105"
+                    autoPlay
                     loop
                     muted
                     playsInline
-                    preload="metadata" // Automatically shows first frame of video as thumbnail
+                    preload="auto"
                   />
                   
                   {/* Dark Vignette Overlay */}
@@ -156,7 +154,7 @@ export default function CaseStudies() {
               className="relative w-full max-w-sm aspect-[9/16] bg-neutral-950 rounded-3xl border border-white/10 shadow-2xl overflow-hidden flex flex-col justify-end"
             >
               <video
-                src={selectedVideo.videoUrl}
+                src={getAssetUrl(selectedVideo.videoUrl)}
                 className="absolute inset-0 w-full h-full object-contain"
                 autoPlay
                 controls

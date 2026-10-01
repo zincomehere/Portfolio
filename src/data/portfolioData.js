@@ -12,7 +12,7 @@ export const personalInfo = {
   subtitle: "Creative Technologist",
   headline: "AI Content Producer. Xây dựng quy trình. Tối ưu chuyển đổi.",
   subHeadline: "Ứng dụng hệ sinh thái AI tạo sinh (Midjourney, Kling AI) và tư duy dữ liệu để sản xuất hàng loạt video Affiliate Performance.",
-  heroVideoUrl: "https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-32111-large.mp4", // Cinematic fallback video
+  heroVideoUrl: "/video/0603(1).mp4", // Cinematic 60fps AI video
   heroVideoPlaceholder: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1920&auto=format&fit=crop", // Elegant dark gradient image
   email: "vinhlephongg@gmail.com",
   facebookUrl: "https://www.facebook.com/zinle.2901",
@@ -197,7 +197,7 @@ export const caseStudies = [
     client: "Dạ Dày Khỏe Đẹp",
     description: "Sử dụng nhân vật hoạt hình dạ dày 3D biểu cảm đáng thương cảnh báo tác hại của việc nhịn ăn giảm cân tiêu cực. Giúp tăng doanh thu Affiliate 35% và CTR quảng cáo đạt 22%.",
     techStack: ["Midjourney", "Kling AI", "CapCut", "TikTok", "Flow"],
-    videoUrl: "/video/trà mâm xôi.mp4",
+    videoUrl: "/video/tra-mam-xoi.mp4",
     imageUrl: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop"
   },
   {

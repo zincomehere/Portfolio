@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { workflowSteps } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 // Map icon strings to Lucide components
 const iconMap = {
@@ -79,7 +80,7 @@ export default function Workflow() {
               className="relative group rounded-xl overflow-hidden aspect-video w-full bg-neutral-900 border border-white/5 flex flex-col justify-end cursor-zoom-in"
             >
               <img 
-                src={step.content.url} 
+                src={getAssetUrl(step.content.url)} 
                 alt={step.content.caption}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
@@ -114,12 +115,12 @@ export default function Workflow() {
           >
             <video 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/vid:scale-102"
-              src={step.content.videoUrl}
+              src={getAssetUrl(step.content.videoUrl)}
               autoPlay 
               loop 
               muted 
               playsInline
-              preload="metadata"
+              preload="auto"
             />
             
             {/* Vignette Overlay */}
@@ -351,7 +352,7 @@ export default function Workflow() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              src="/image/Create_a_professional_3x3_visual_202606031345.jpeg"
+              src={getAssetUrl("/image/Create_a_professional_3x3_visual_202606031345.jpeg")}
               alt="Turmeric Commercial Storyboard 3x3 Grid"
               className="max-w-full max-h-[90vh] object-contain rounded-lg border border-white/10 shadow-2xl"
             />
@@ -383,7 +384,7 @@ export default function Workflow() {
               className="relative w-full max-w-4xl aspect-video bg-neutral-950 rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
             >
               <video
-                src={activeVideoUrl}
+                src={getAssetUrl(activeVideoUrl)}
                 className="w-full h-full object-contain"
                 autoPlay
                 controls
