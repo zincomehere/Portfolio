@@ -147,7 +147,7 @@ export default function Hero() {
               href="#workflow"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white text-black font-semibold text-sm transition-all duration-300 hover:bg-neutral-200 hover:scale-105 active:scale-95 shadow-[0_10px_20px_rgba(255,255,255,0.1)] group"
             >
-              Khám Phá Workflow
+              Explore AI Workflow
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
 
@@ -155,7 +155,7 @@ export default function Hero() {
               href="#case-studies"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border border-neutral-800 bg-neutral-950/40 text-neutral-300 font-semibold text-sm transition-all duration-300 hover:border-neutral-700 hover:text-white hover:bg-neutral-900/60 backdrop-blur-sm"
             >
-              Xem Dự Án Thực Tế
+              View Case Studies
             </a>
           </motion.div>
         </motion.div>

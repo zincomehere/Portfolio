@@ -38,9 +38,9 @@ export default function Marquee() {
       <div className="absolute top-0 bottom-0 right-0 w-20 sm:w-40 bg-gradient-to-l from-neutral-950 to-transparent z-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
-        <span className="font-mono text-xs uppercase tracking-widest text-purple-400 mb-2 block">Công nghệ tích hợp</span>
+        <span className="font-mono text-xs uppercase tracking-widest text-purple-400 mb-2 block">Integrated Tech Stack</span>
         <h3 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
-          Hệ Sinh Thái & Công Cụ Tối Ưu
+          AI Ecosystem & Production Tools
         </h3>
       </div>
 

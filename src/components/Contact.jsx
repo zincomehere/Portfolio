@@ -88,12 +88,12 @@ export default function Contact() {
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        alert("Có lỗi xảy ra khi gửi tin nhắn: " + (result.message || "Vui lòng thử lại sau."));
+        alert("An error occurred while sending your message: " + (result.message || "Please try again later."));
         setIsSubmitting(false);
       }
     } catch (error) {
       console.error("Error submitting contact form to Web3Forms:", error);
-      alert("Lỗi kết nối. Không thể gửi tin nhắn ngay bây giờ.");
+      alert("Connection error. Unable to send your message right now.");
       setIsSubmitting(false);
     }
   };
@@ -108,14 +108,14 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20">
           <span className="font-mono text-xs uppercase tracking-widest text-purple-400 mb-3 block">
-            Hợp tác & Liên hệ
+            Let's Collaborate
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
-            Khởi Động Dự Án Của Bạn
+            Launch Your Next Campaign
           </h2>
           <div className="h-1 w-20 bg-purple-500 mx-auto rounded-full"></div>
           <p className="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base mt-4 font-light">
-            Sẵn sàng nâng tầm doanh thu sản phẩm với các chiến dịch video ngắn tự động tối ưu hóa từ AI?
+            Ready to scale your product revenue with high-converting, AI-automated video campaigns?
           </p>
         </div>
 
@@ -125,9 +125,9 @@ export default function Contact() {
           {/* Info Details (Left Column: 5 Cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white tracking-wide">Thông tin liên lạc trực tiếp</h3>
+              <h3 className="text-2xl font-bold text-white tracking-wide">Direct Communication</h3>
               <p className="text-sm text-neutral-400 font-light leading-relaxed">
-                Tôi luôn sẵn lòng trao đổi về các ý tưởng kịch bản AI, quy trình sản xuất video tự động hàng loạt, hoặc tối ưu hóa CTR chuyển đổi cho các chiến dịch Affiliate Performance.
+                I'm always open to discussing AI video scripting, automated bulk production pipelines, or conversion rate optimization for affiliate performance campaigns.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function Contact() {
                   <Mail size={18} />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-neutral-500 block uppercase">Gửi Email</span>
+                  <span className="text-[10px] font-mono text-neutral-500 block uppercase">Email Me</span>
                   <span className="text-sm text-neutral-300 group-hover:text-white font-medium transition-colors">{personalInfo.email}</span>
                 </div>
               </a>
@@ -176,7 +176,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] font-mono text-neutral-500 block uppercase">Zalo Direct</span>
-                  <span className="text-sm text-neutral-300 group-hover:text-white font-medium transition-colors">Chat qua Zalo</span>
+                  <span className="text-sm text-neutral-300 group-hover:text-white font-medium transition-colors">Chat via Zalo</span>
                 </div>
               </a>
 
@@ -199,15 +199,15 @@ export default function Contact() {
                     className="flex flex-col items-center justify-center text-center py-12"
                   >
                     <CheckCircle size={56} className="text-emerald-400 mb-4 animate-bounce" />
-                    <h4 className="text-2xl font-bold text-white mb-2">Gửi tin nhắn thành công!</h4>
+                    <h4 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h4>
                     <p className="text-sm text-neutral-400 max-w-sm mb-6 font-light">
-                      Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi lại ngay qua email của bạn trong thời gian sớm nhất.
+                      Thank you for reaching out. I will get back to you via email as soon as possible.
                     </p>
                     <button 
                       onClick={() => setSubmitSuccess(false)}
                       className="px-6 py-2.5 rounded-full border border-neutral-800 hover:border-neutral-700 bg-neutral-900 text-neutral-300 text-xs font-semibold uppercase tracking-wider transition-all"
                     >
-                      Gửi tin nhắn mới
+                      Send Another Message
                     </button>
                   </motion.div>
                 ) : (
@@ -221,7 +221,7 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Name */}
                       <div className="space-y-1.5">
-                        <label htmlFor="name" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Họ và tên</label>
+                        <label htmlFor="name" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Your Name</label>
                         <input 
                           type="text" 
                           id="name"
@@ -229,14 +229,14 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          placeholder="Nguyễn Văn A"
+                          placeholder="John Doe"
                           className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-purple-500 transition-colors"
                         />
                       </div>
 
                       {/* Email */}
                       <div className="space-y-1.5">
-                        <label htmlFor="email" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Địa chỉ Email</label>
+                        <label htmlFor="email" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Email Address</label>
                         <input 
                           type="email" 
                           id="email"
@@ -244,7 +244,7 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder="name@company.com"
+                          placeholder="alex@company.com"
                           className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-purple-500 transition-colors"
                         />
                       </div>
@@ -252,7 +252,7 @@ export default function Contact() {
 
                     {/* Project Type */}
                     <div className="space-y-1.5">
-                      <label htmlFor="projectType" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Hình thức hợp tác</label>
+                      <label htmlFor="projectType" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Collaboration Scope</label>
                       <select 
                         id="projectType"
                         name="projectType"
@@ -260,16 +260,16 @@ export default function Contact() {
                         onChange={handleChange}
                         className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
                       >
-                        <option value="Affiliate Video Production">Affiliate Video Production (Sản xuất hàng loạt)</option>
-                        <option value="AI Workflow Consulting">Tư vấn Quy trình AI (Workflow Consulting)</option>
+                        <option value="Affiliate Video Production">Affiliate Video Production (Bulk Production)</option>
+                        <option value="AI Workflow Consulting">AI Workflow Consulting</option>
                         <option value="Visual Art & Techwear branding">Visual Art & AI Branding</option>
-                        <option value="Full-time / Long-term Hire">Hợp tác dài hạn / Toàn thời gian</option>
+                        <option value="Full-time / Long-term Hire">Full-time / Long-term Contract</option>
                       </select>
                     </div>
 
                     {/* Message */}
                     <div className="space-y-1.5">
-                      <label htmlFor="message" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Chi tiết yêu cầu</label>
+                      <label htmlFor="message" className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">Project Details</label>
                       <textarea 
                         id="message"
                         name="message"
@@ -277,7 +277,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         rows="4"
-                        placeholder="Hãy mô tả ngắn gọn về sản phẩm và mục tiêu CTR bạn mong muốn..."
+                        placeholder="Briefly describe your product, target audience, and desired CTR goals..."
                         className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-purple-500 transition-colors resize-none"
                       />
                     </div>
@@ -291,12 +291,12 @@ export default function Contact() {
                       {isSubmitting ? (
                         <>
                           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                          <span>Đang gửi thông tin...</span>
+                          <span>Sending Inquiry...</span>
                         </>
                       ) : (
                         <>
                           <Send size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                          <span>Gửi yêu cầu liên hệ</span>
+                          <span>Send Inquiry</span>
                         </>
                       )}
                     </button>

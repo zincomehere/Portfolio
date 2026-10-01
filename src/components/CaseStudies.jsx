@@ -32,14 +32,14 @@ export default function CaseStudies() {
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-24">
           <span className="font-mono text-xs uppercase tracking-widest text-cyan-400 mb-3 block">
-            Dự án & Kết quả
+            Featured Work & Results
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
             Performance Case Studies
           </h2>
           <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full"></div>
           <p className="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base mt-4 font-light">
-            Các chiến dịch quảng cáo và thương hiệu ứng dụng công nghệ AI đạt mức chuyển đổi thực tế ấn tượng. Click để xem toàn bộ video có âm thanh.
+            High-converting performance ad campaigns powered by generative AI. Click any card to watch full video with audio.
           </p>
         </div>
 

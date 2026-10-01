@@ -66,7 +66,7 @@ export default function Workflow() {
             </div>
             
             <div className="p-4 rounded-xl bg-purple-950/10 border border-purple-500/10 text-xs text-purple-300/80 leading-relaxed text-left shrink-0">
-              <strong className="text-purple-400 font-semibold block mb-1">💡 Kỹ thuật tối ưu:</strong>
+              <strong className="text-purple-400 font-semibold block mb-1">💡 Optimization Insight:</strong>
               {step.content.explanation}
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function Workflow() {
             </div>
             
             <div className="p-4 rounded-xl bg-neutral-900 border border-white/5 text-xs text-neutral-400 leading-relaxed text-left">
-              <strong className="text-white font-semibold block mb-1">📊 Kết quả phân cảnh:</strong>
+              <strong className="text-white font-semibold block mb-1">📊 Storyboard Result:</strong>
               {step.content.caption}
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function Workflow() {
                   <span className="text-3xl font-extrabold text-emerald-400 tracking-tight">{step.content.hookRate}</span>
                   <span className="text-xs text-emerald-400/80 font-mono">%</span>
                 </div>
-                <p className="text-[10px] text-neutral-500 mt-1">Giữ chân người xem</p>
+                <p className="text-[10px] text-neutral-500 mt-1">Viewer Retention</p>
               </div>
 
               {/* Stat 2 */}
@@ -170,38 +170,38 @@ export default function Workflow() {
                   <span className="text-3xl font-extrabold text-cyan-400 tracking-tight">{step.content.retentionRate}</span>
                   <span className="text-xs text-cyan-400/80 font-mono">%</span>
                 </div>
-                <p className="text-[10px] text-neutral-500 mt-1">Tỷ lệ xem hết video</p>
+                <p className="text-[10px] text-neutral-500 mt-1">Completion Rate</p>
               </div>
 
               {/* Stat 3 */}
               <div className="p-4 rounded-xl border border-yellow-500/10 bg-yellow-500/5 hover:border-yellow-500/20 transition-all duration-300">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-yellow-400/70 font-medium">CTR Tăng Trưởng</span>
+                  <span className="text-xs text-yellow-400/70 font-medium">CTR Growth</span>
                   <Sparkles size={14} className="text-yellow-400" />
                 </div>
                 <div className="flex items-baseline gap-0.5">
                   <span className="text-3xl font-extrabold text-yellow-400 tracking-tight">+{step.content.ctrIncrease}</span>
                   <span className="text-xs text-yellow-400/80 font-mono">%</span>
                 </div>
-                <p className="text-[10px] text-neutral-500 mt-1">Tối ưu chuyển đổi</p>
+                <p className="text-[10px] text-neutral-500 mt-1">Conversion Boost</p>
               </div>
 
               {/* Stat 4 */}
               <div className="p-4 rounded-xl border border-purple-500/10 bg-purple-500/5 hover:border-purple-500/20 transition-all duration-300">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-purple-400/70 font-medium">Chi Phí Sản Xuất</span>
+                  <span className="text-xs text-purple-400/70 font-medium">Production Cost</span>
                   <TrendingUp size={14} className="text-purple-400 rotate-180" />
                 </div>
                 <div className="flex items-baseline gap-0.5">
                   <span className="text-3xl font-extrabold text-purple-400 tracking-tight">-{step.content.productionCostReduction}</span>
                   <span className="text-xs text-purple-400/80 font-mono">%</span>
                 </div>
-                <p className="text-[10px] text-neutral-500 mt-1">Tiết kiệm nhân lực</p>
+                <p className="text-[10px] text-neutral-500 mt-1">Cost Savings</p>
               </div>
             </div>
 
             <div className="p-4 rounded-xl bg-neutral-900 border border-white/5 text-xs text-neutral-400 leading-relaxed text-left">
-              <strong className="text-white font-semibold block mb-1">📊 Kết quả đo lường:</strong>
+              <strong className="text-white font-semibold block mb-1">📊 Performance Metrics:</strong>
               {step.content.explanation}
             </div>
           </div>
@@ -222,14 +222,14 @@ export default function Workflow() {
         {/* Section Title */}
         <div className="text-center mb-16 sm:mb-24">
           <span className="font-mono text-xs uppercase tracking-widest text-purple-400 mb-3 block">
-            Quy trình sản xuất
+            Production Pipeline
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
             The AI Video Workflow
           </h2>
           <div className="h-1 w-20 bg-purple-500 mx-auto rounded-full"></div>
           <p className="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base mt-4 font-light">
-            Quy trình khép kín tối ưu hiệu suất, từ nghiên cứu câu lệnh đến chỉ số chuyển đổi bán hàng thực tế.
+            An end-to-end performance pipeline, from prompt engineering to real-world sales conversion optimization.
           </p>
         </div>
 
@@ -265,7 +265,7 @@ export default function Workflow() {
                         : 'bg-transparent border-transparent hover:bg-neutral-900/30'
                     }`}>
                       <span className="font-mono text-[10px] uppercase tracking-wider text-purple-400 mb-1 block">
-                        Bước {step.id}: {step.subtitle}
+                        Step {step.id}: {step.subtitle}
                       </span>
                       <h3 className={`text-lg sm:text-xl font-bold transition-colors ${
                         isActive ? 'text-white' : 'text-neutral-400 group-hover:text-neutral-200'
